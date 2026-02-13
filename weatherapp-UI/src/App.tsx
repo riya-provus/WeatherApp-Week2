@@ -369,9 +369,8 @@ function App() {
                   type="radio"
                   value="gps"
                   checked={currentMode === "gps"}
-                  onChange={(e) => {
+                  onChange={() => {
                     setCurrentMode("gps");
-                    setCity(e.target.value);
                   }}
                 />
                 Use GPS
@@ -383,7 +382,6 @@ function App() {
                   checked={currentMode === "city"}
                   onChange={(e) => {
                     setCurrentMode("city");
-                    setCity(e.target.value);
                   }}
                 />
                 Choose City
@@ -397,7 +395,8 @@ function App() {
               </div>
             )}
           </div>
-        )}
+        )} 
+
 
         {selectedDomain === "forecast" && (
           <div className="forecast-options">
@@ -456,13 +455,14 @@ function App() {
             }
             fetchData();
           }}>
-          Get {selectedDomain.charAt(0).toUpperCase() + selectedDomain.slice(1)} Weather
+          Get Weather
         </button>
       </div>
 
-      {answer && selectedDomain === "current" && "current" in answer && <WeatherCard data={answer} type="current" />}
-      {answer && selectedDomain === "future" && "forecast" in answer && <WeatherCard data={answer} type="future" />}
-      {answer && selectedDomain === "forecast" && "forecast" in answer && (
+      
+      {answer &&selectedDomain === "current" && "current" in answer && <WeatherCard data={answer} type="current" />}
+      {answer &&selectedDomain === "future" && "forecast" in answer && <WeatherCard data={answer} type="future" />}
+      {answer &&selectedDomain === "forecast" && "forecast" in answer && (
         <ForeCastCharts city={answer?.location?.name} 
                         temp={answer?.forecast?.forecastday[0]?.day?.avgtemp_c} 
                         condition={answer?.forecast?.forecastday[0]?.day?.condition?.text} 

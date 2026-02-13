@@ -222,5 +222,3 @@ http://localhost:5173
 React • TypeScript • Frontend Development
 
 ---
-
-✅ *This README is suitable for GitHub, portfolio, exams, and academic submissions.*
