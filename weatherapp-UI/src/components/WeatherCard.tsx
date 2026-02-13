@@ -2,8 +2,8 @@ import React from "react";
 import type { WeatherResponse } from "../interfaces/WeatherResponse";
 import type { ForecastDetails } from "../interfaces/ForecastDetails";
 import { ForeCastCharts } from "./ForeCastCharts";
-
 import "./WeatherCard.css";
+
 interface Props {
   data: WeatherResponse | ForecastDetails;
   type: "current" | "future" |"forecast";

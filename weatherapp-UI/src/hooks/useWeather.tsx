@@ -14,14 +14,11 @@ export const useWeather = () => {
   const [days, setDays] = useState<number>(1);
   const [currentMode, setCurrentMode] = useState<Mode>("gps");
   const [date, setDate] = useState<string>("");
-    const [input, setInput] = useState<string>("");
-
-
+  const [input, setInput] = useState<string>("");
   const [cities,setCities]=useState<string[]>([]);
 
   useEffect(() => {
     setAnswer(null);
-    // if (selectedDomain !== "multipleLocations") setInput("");
   },[selectedDomain, city],
   );
 
