@@ -1,0 +1,81 @@
+.weather-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 20px 30px;
+  margin-top: 15px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+  overflow: hidden;
+}
+
+.top h2 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.top h1 {
+  font-size: 64px;
+  margin: 5px 0;
+  font-weight: 700;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+
+.main-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));
+}
+
+.condition-text {
+  text-transform: capitalize;
+  margin-top: -10px !important;
+  margin-bottom: 20px !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-item span {
+  font-size: 11px;
+  text-transform: uppercase;
+  opacity: 0.7;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.detail-item p {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
